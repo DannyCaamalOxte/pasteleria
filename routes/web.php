@@ -18,6 +18,7 @@ Route::get('/', function () {
 });
 
 //vistas de los blade
+Route::view('index','index');
 Route::view('ventas','ventas');
 Route::view('productos','productos');
 

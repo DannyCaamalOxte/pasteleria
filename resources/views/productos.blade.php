@@ -4,26 +4,22 @@
 	
 	<!-- INICIA VUE -->
 	<div id="producto">
-
-	
-
  <div class="row">
  	<div class="col-md-8">
- 		
  	</div>
  </div>
 
 		<div class="row">
 			<div class="col-md-12">
-				<div class="card card-warning"> 
+				<div class="card card border-warning"> 
 					<div class="card-header card text-center">
 						
-						<h3>Agregar postre
+						<!-- <h3>Agregar postre
 						<span class="btn btn-sm btn-primary" @click="mostrarModal()">
 							<i class="fas fa-plus"></i>
 
 						</span>
-						</h3> 
+						</h3>  -->
 
 						<div class="col-md-6">
 							<p align="left">Escriba el nombre del postre para realizar búsqueda</p>
@@ -31,10 +27,17 @@
 						</div>
 					</div>
 
-					<div class="card-body">
+					<div class="card-body card border-warning">
+						<h3>Agregar postre
+						<span class="btn" style="background-image: url(img/fondo4.jpg);" @click="mostrarModal()">
+							<!-- <i class="fas fa-plus"></i> -->
+							<i class="fa-light fa-cake-slice" style="color:white;"></i>
+
+						</span>
+						</h3> 
 						
 							<!-- INICIO DE LA TABLA -->
-				<table class="table table-bordered table-sm">
+				<table class="table table-bordered table-sm" style="color:black;">
 					<thead>
 						<th hidden="">ID MASCOTA</th>
 						<th style="text-align: center" class="table-danger">SKU</th>
@@ -52,12 +55,14 @@
 							<td>$ @{{producto.precio}} MXN</td>
 							<td>@{{producto.cantidad}}</td>
 							<td>
-								<button class="btn btn-sm" @click="editandoProducto(producto.sku)">
-									<i class="fas fa-edit"></i>
+								<button class="btn" style="background-image: url(img/fondo4.jpg);" @click="editandoProducto(producto.sku)">
+									<!-- <i class="fa-solid fa-file-pen"></i> -->
+									<i class="fa-light fa-file-pen" style="color:white"></i>
 								</button>
 
-								<button class="btn btn-sm" @click="eliminarProducto(producto.sku)">
-									<i class="fas fa-trash-alt"></i>
+								<button class="btn" style="background-image: url(img/fondo4.jpg);" @click="eliminarProducto(producto.sku)">
+									<!-- <i class="fas fa-trash-alt"></i> -->
+									<i class="fa-light fa-trash" style="color:white"></i>
 								</button>
 							</td>
 						</tr>
@@ -83,8 +88,8 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel" v-if="agregando==true">AGREGANDO PRODUCTO</h5>
-        <h5 class="modal-title" id="exampleModalLabel" v-if="agregando==false">EDITANDO PRODUCTO</h5>
+        <h5 class="modal-title" id="exampleModalLabel" v-if="agregando==true">AGREGANDO POSTRE</h5>
+        <h5 class="modal-title" id="exampleModalLabel" v-if="agregando==false">EDITANDO POSTRE</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -95,13 +100,11 @@
         <input type="number" class="form-control" placeholder="Escriba precio" v-model="precio"><br>
         <input type="number" class="form-control" placeholder="Escriba la cantidad" v-model="cantidad"><br>
 
-        <!-- <h5>Especie elegida: @{{id_especie}}</h5> -->
-
-
+   
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary" @click="guardarProducto()" v-if="agregando==true">Guardar</button>
+        <button type="button" class="btn btn-primary" @click="guardarProducto()" v-if="agregando==true" style="background-image: url(img/fondo4.jpg);">Guardar</button>
 
         <button type="button" class="btn btn-primary" @click="actualizarProducto()" v-if="agregando==false">Guardar</button>
       </div>
