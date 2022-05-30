@@ -64,7 +64,7 @@
 								<td><input type="number" v-model.number="cantidades[index]"></td>
 								<td>
 									<button class="btn btn-default btn-sm" @click="eliminarProducto(index)">
-										<i class="fas fa-trash-alt"></i>
+										<i class="fa-light fa-trash"></i>
 									</button>
 								</td>
 								<td>@{{totalProducto(index)}}</td>

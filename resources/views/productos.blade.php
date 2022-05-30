@@ -11,6 +11,9 @@
 
 		<div class="row">
 			<div class="col-md-12">
+				<div align="center">
+					<h4>Inventario de productos</h4>
+				</div>
 				<div class="card card border-warning"> 
 					<div class="card-header card text-center">
 						
@@ -22,13 +25,13 @@
 						</h3>  -->
 
 						<div class="col-md-6">
-							<p align="left">Escriba el nombre del postre para realizar búsqueda</p>
-						<input type="text" placeholder="Nombre del postre" class="form-control" v-model="buscar">
+							<p align="left">Escriba el nombre del producto para realizar búsqueda</p>
+						<input type="text" placeholder="Nombre del producto" class="form-control" v-model="buscar">
 						</div>
 					</div>
 
 					<div class="card-body card border-warning">
-						<h3>Agregar postre
+						<h3>Agregar producto
 						<span class="btn" style="background-image: url(img/fondo4.jpg);" @click="mostrarModal()">
 							<!-- <i class="fas fa-plus"></i> -->
 							<i class="fa-light fa-cake-slice" style="color:white;"></i>
@@ -41,7 +44,7 @@
 					<thead>
 						<th hidden="">ID MASCOTA</th>
 						<th style="text-align: center" class="table-danger">SKU</th>
-						<th style="text-align: center" class="table-danger">POSTRE</th>
+						<th style="text-align: center" class="table-danger">DESCRIPCIÓN</th>
 						<th style="text-align: center" class="table-danger">PRECIO</th>
 						<th style="text-align: center" class="table-danger">DISPONIBLES</th>
 						<th style="text-align: center" class="table-danger">OPCIONES</th>
@@ -82,14 +85,17 @@
 	  				</div>
 		</div>
 		<!--fin del row-->
+		<div align="center">
+			<img src="img/martha.png" width="120" height="120">
+		</div>
 
 <!-- INICIA VENTANA MODAL -->
 <div class="modal fade" id="modalProductos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel" v-if="agregando==true">AGREGANDO POSTRE</h5>
-        <h5 class="modal-title" id="exampleModalLabel" v-if="agregando==false">EDITANDO POSTRE</h5>
+        <h5 class="modal-title" id="exampleModalLabel" v-if="agregando==true">AGREGANDO PRODUCTO</h5>
+        <h5 class="modal-title" id="exampleModalLabel" v-if="agregando==false">EDITANDO PRODUCTO</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
