@@ -1,34 +1,33 @@
 @extends('layouts.master')
-@section('titulo','ventas')
+@section('titulo','ventas Tekanto')
 @section('contenido')
 	
-<div id="apiVenta">
+<div id="apiVentat">
 	
 	
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-md-4">
 
 				<div align="center">
-					<h4>panel de ventas suc. Kimbila</h4>
+					<h4>panel de ventas suc. Tekanto</h4>
 				</div>
-				<br>
 
 				<div class="input-group mb-3">
-	  					<input type="text" class="form-control mb-3" placeholder="Escriba el codigo del producto" aria-label="Recipient's username" aria-describedby="basic-addon2" v-model="sku"
+	  					<input type="text" class="form-control mb-3" placeholder="Escriba el codigo del producto" aria-label="Recipient's username" aria-describedby="basic-addon2" v-model="skut"
 	  					v-on:keyup.enter="buscarProducto()">
 	  				<div class="input-group-append mb-3">
-	   					 <button class="btn btn-primary" style="background-image: url(img/fondo4.jpg);" type="button" @click="buscarProducto()">Añadir</button>
+	   					 <button class="btn btn-primary" type="button" @click="buscarProducto()">Añadir</button>
 
 	  				</div>
-	  				<!-- <div class="input-group-append mb-3">
-	  					<button class="btn btn-success" type="button" @click="mostrarCobro()">Cobrar</button>
-	  				</div> -->
 	  				<div class="input-group-append mb-3">
-	  					<button class="btn btn-success" style="background-image: url(img/fondo4.jpg);" type="button" @click="mostrarBusqueda()">Buscar</button>
+	  					<button class="btn btn-success" type="button" @click="mostrarCobro()">Cobrar</button>
 	  				</div>
-	  				<!-- <div class="input-group-append mb-3">
+	  				<div class="input-group-append mb-3">
+	  					<button class="btn btn-success" type="button" @click="mostrarBusqueda()">Buscar</button>
+	  				</div>
+	  				<div class="input-group-append mb-3">
 	  					<a href="productos">Registrar nuevo producto</a>
-	  				</div> -->
+	  				</div>
 
 				</div>
 
@@ -61,11 +60,11 @@
 
 						<tbody>
 							<tr v-for="(v,index) in ventas">
-								<td>@{{v.sku}}</td>
-								<td>@{{v.nombre}}
+								<td>@{{v.skut}}</td>
+								<td>@{{v.nombret}}
 									<!-- <img v-bind:src=v.foto width="70" height="60"></td> -->
 								
-								<td>@{{v.precio}}</td>
+								<td>@{{v.preciot}}</td>
 								<td><input type="number" v-model.number="cantidades[index]"></td>
 								<td>
 									<button class="btn btn-default btn-sm" @click="eliminarProducto(index)">
@@ -112,14 +111,10 @@
 					 	</tr>
 						
 						<tr>
-							<th style="text-align: center" class="table-danger">Num. PRODUCTOS :</th>
+							<th style="text-align: center" class="table-danger">Articulos :</th>
 							<td>@{{noArticulos}}</td>
 						</tr>
 					</table> 
-
-					<div class="input-group-append mb-3">
-	  					<button class="btn btn-success" style="background-image: url(img/fondo4.jpg);" type="button" @click="mostrarCobro()">Cobrar</button>
-	  				</div>
 				
 			</div>
 			<!-- FIN DEL CARD BODY -->
@@ -127,9 +122,6 @@
 		<!-- FIN DEL CARD -->
 	</div>
 			<!-- FIN DEL COL-MD-4 -->
-			<div class="input-group-append mb-3">
-	  					<a href="productos">Registrar nuevo producto</a>
-	  				</div>
 </div>
 
 <!-- Modal para el formulario del registro de los moovimientos -->
@@ -189,7 +181,7 @@
           				<label for="inputfolio">Buscar producto</label>
 						<input type="text" placeholder="Escriba el nombre del producto" class="form-control" v-model="buscar">
 						<label for="inputfolio">Ingrese el SKU para agregar el producto</label>
-						<input type="text" class="form-control mb-3" placeholder="SKU del producto" aria-label="Recipient's username" aria-describedby="basic-addon2" v-model="sku"
+						<input type="text" class="form-control mb-3" placeholder="SKU del producto" aria-label="Recipient's username" aria-describedby="basic-addon2" v-model="skut"
 	  					v-on:keyup.enter="buscarProducto()">
 
 
@@ -208,10 +200,10 @@
 
 					<tbody>
 						<tr v-for="producto in filtroProductos">
-							<th>@{{producto.sku}}</th>
-							<td>@{{producto.nombre}}</td>
-							<td>$ @{{producto.precio}} MXN</td>
-							<td>@{{producto.cantidad}}</td>
+							<th>@{{producto.skut}}</th>
+							<td>@{{producto.nombret}}</td>
+							<td>$ @{{producto.preciot}} MXN</td>
+							<td>@{{producto.cantidadt}}</td>
 							
 						</tr>
 					</tbody>
@@ -224,7 +216,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary" @click="buscarProducto()" ::="sku" data-dismiss="modal">Agregar y cerrar</button>
+        <button type="button" class="btn btn-primary" @click="buscarProducto()" ::="skut" data-dismiss="modal">Agregar y cerrar</button>
       </div>
     </div>
   </div>
@@ -243,7 +235,7 @@
 
 @push('scripts')
 	<script type="text/javascript" src="js/vue-resource.js"></script>
-	<script type="text/javascript" src="js/apis/apiVenta.js"></script>
+	<script type="text/javascript" src="js/apis/apiVentat.js"></script>
 	<script type="text/javascript" src="js/moment-with-locales.min.js"></script>
 @endpush
 

@@ -19,9 +19,9 @@
   <div class="col-sm-6">
     <div class="card card border-warning">
       <div class="card-body">
-        <h5 class="card-title">Administrador de postres</h5>
-        <p class="card-text">acceda para administrar todos los postres.</p>
-        <a href="productos" class="btn btn-primary">Ir a panel de postres</a>
+        <h5 class="card-title">Inventario de productos suc. Kimbila</h5>
+        <p class="card-text">Acceda para administrar todos los postres y productos de la sucursal de Kimbila.</p>
+        <a href="productos" class="btn btn-primary">Acceder</a>
       </div>
     </div>
   </div>
@@ -31,9 +31,9 @@
   <div class="col-sm-6">
     <div class="card card border-danger">
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="ventas" class="btn btn-primary">Go somewhere</a>
+        <h5 class="card-title">Inventario de productos suc. Citilcum</h5>
+        <p class="card-text">Acceda para administrar todos los postres y productos de la sucursal de Citilcum.</p>
+        <a href="productosc" class="btn btn-primary">Acceder</a>
       </div>
     </div>
   </div>

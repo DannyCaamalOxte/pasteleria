@@ -58,28 +58,62 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Interface
+                Sucursales
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Components</span>
+                    <!-- <i class="fa-solid fa-store"></i> -->
+                    <i class="fa-light fa-store"></i>
+                    <span>Kimbila</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item" href="buttons.html">Buttons</a>
-                        <a class="collapse-item" href="cards.html">Cards</a>
+                        <h6 class="collapse-header">Apartados: </h6>
+                        <a class="collapse-item" href="ventas">Panel de ventas</a>
+                        <a class="collapse-item" href="productos">Inventario de productos</a>
                     </div>
                 </div>
             </li>
 
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsetres"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <!-- <i <i class="fa-solid fa-store"></i> -->
+                    <i class="fa-light fa-store"></i>
+                    <span>Citilcum</span>
+                </a>
+                <div id="collapsetres" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Apartados: </h6>
+                        <a class="collapse-item" href="ventasc">Panel de ventas</a>
+                        <a class="collapse-item" href="productosc">Inventario de productos</a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsecuatro"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <!-- <i <i class="fa-solid fa-store"></i> -->
+                    <i class="fa-light fa-store"></i>
+                    <span>Tekanto</span>
+                </a>
+                <div id="collapsecuatro" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Apartados: </h6>
+                        <a class="collapse-item" href="ventast">Panel de ventas</a>
+                        <a class="collapse-item" href="productost">Inventario de productos</a>
+                    </div>
+                </div>
+            </li>
+
+
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-wrench"></i>
                     <span>Utilities</span>
@@ -95,6 +129,10 @@
                     </div>
                 </div>
             </li>
+
+
+
+            
 
             <!-- Divider -->
             <hr class="sidebar-divider">

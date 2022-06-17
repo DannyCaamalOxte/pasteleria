@@ -1,9 +1,9 @@
 @extends('layouts.master')
-@section('titulo','Administración')
+@section('titulo','Inventario suc. Tekanto')
 @section('contenido')
 	
 	<!-- INICIA VUE -->
-	<div id="producto">
+	<div id="productot">
  <div class="row">
  	<div class="col-md-8">
  	</div>
@@ -12,7 +12,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div align="center">
-					<h4>Inventario de productos suc. Kimbila</h4>
+					<h4>Inventario de productos suc. Tekanto</h4>
 				</div>
 				<div class="card card border-warning"> 
 					<div class="card-header card text-center">
@@ -53,17 +53,17 @@
 
 					<tbody>
 						<tr v-for="producto in filtroProductos">
-							<th>@{{producto.sku}}</th>
-							<td>@{{producto.nombre}}</td>
-							<td>$ @{{producto.precio}} MXN</td>
-							<td>@{{producto.cantidad}}</td>
+							<th>@{{producto.skut}}</th>
+							<td>@{{producto.nombret}}</td>
+							<td>$ @{{producto.preciot}} MXN</td>
+							<td>@{{producto.cantidadt}}</td>
 							<td>
-								<button class="btn" style="background-image: url(img/fondo4.jpg);" @click="editandoProducto(producto.sku)">
+								<button class="btn" style="background-image: url(img/fondo4.jpg);" @click="editandoProducto(producto.skut)">
 									<!-- <i class="fa-solid fa-file-pen"></i> -->
 									<i class="fa-light fa-file-pen" style="color:white"></i>
 								</button>
 
-								<button class="btn" style="background-image: url(img/fondo4.jpg);" @click="eliminarProducto(producto.sku)">
+								<button class="btn" style="background-image: url(img/fondo4.jpg);" @click="eliminarProducto(producto.skut)">
 									<!-- <i class="fas fa-trash-alt"></i> -->
 									<i class="fa-light fa-trash" style="color:white"></i>
 								</button>
@@ -101,10 +101,10 @@
         </button>
       </div>
       <div class="modal-body">
-        <input type="number" class="form-control" placeholder="Escriba el sku" v-model="sku"><br>
-        <input type="text" class="form-control" placeholder="Nombre del producto" v-model="nombre"><br>
-        <input type="number" class="form-control" placeholder="Escriba precio" v-model="precio"><br>
-        <input type="number" class="form-control" placeholder="Escriba la cantidad" v-model="cantidad"><br>
+        <input type="number" class="form-control" placeholder="Escriba el sku" v-model="skut"><br>
+        <input type="text" class="form-control" placeholder="Nombre del producto" v-model="nombret"><br>
+        <input type="number" class="form-control" placeholder="Escriba precio" v-model="preciot"><br>
+        <input type="number" class="form-control" placeholder="Escriba la cantidad" v-model="cantidadt"><br>
 
    
       </div>
@@ -128,7 +128,7 @@
 
 @push('scripts')
 	<script type="text/javascript" src="js/vue-resource.js"></script>
-	<script type="text/javascript" src="js/apis/apiProducto.js"></script>
+	<script type="text/javascript" src="js/apis/apiProductot.js"></script>
 @endpush
 
 <input type="hidden" name="route" value="{{url('/')}}">
