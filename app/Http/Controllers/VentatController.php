@@ -19,6 +19,7 @@ class VentatController extends Controller
     public function index()
     {
         // 
+        return Ventat::all();
         //return 'hhh';
        
     }

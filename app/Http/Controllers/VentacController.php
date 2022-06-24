@@ -19,6 +19,7 @@ class VentacController extends Controller
     public function index()
     {
         // 
+        return Ventac::all();
         //return 'hhh';
        
     }

@@ -1,9 +1,9 @@
 @extends('layouts.master')
-@section('titulo','Inventario suc. Kimbila')
+@section('titulo','Historial de ventas suc. Citilcum')
 @section('contenido')
 	
 	<!-- INICIA VUE -->
-	<div id="producto">
+	<div id="apiVentashechas">
  <div class="row">
  	<div class="col-md-8">
  	</div>
@@ -12,7 +12,8 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div align="center">
-					<h4>Inventario de productos suc. Kimbila</h4>
+					<h4>Detalles de ventas suc. Citilcum</h4>
+					
 				</div>
 				<div class="card card border-warning"> 
 					<div class="card-header card text-center">
@@ -24,50 +25,45 @@
 						</span>
 						</h3>  -->
 
-						<div class="col-md-6">
-							<p align="left">Escriba el nombre del producto para realizar búsqueda</p>
+						<!-- <div class="col-md-6">
+							<p align="left">Escriba el folio para realizar búsqueda</p>
 						<input type="text" placeholder="Nombre del producto" class="form-control" v-model="buscar">
+						</div> -->
+
+						<div class="col-md-6">
+							<p align="left">Escriba la fecha para realizar búsqueda</p>
+						<input type="date" class="form-control" v-model="buscar2">
+						<input type="date" class="form-control" v-model="buscar3">
 						</div>
+							<div class="col">
+              			<label for="inputfolio">Total</label>
+              			<input type="number" class="form-control" disabled="" :value="totalNeto">
+            				</div>
+
 					</div>
 
 					<div class="card-body card border-warning">
-						<h3>Agregar producto
-						<span class="btn" style="background-image: url(img/fondo4.jpg);" @click="mostrarModal()">
-							<!-- <i class="fas fa-plus"></i> -->
-							<i class="fa-light fa-cake-slice" style="color:white;"></i>
-
-						</span>
-						</h3> 
+						
 						
 							<!-- INICIO DE LA TABLA -->
 				<table class="table table-bordered table-sm" style="color:black;">
 					<thead>
 						<th hidden="">ID MASCOTA</th>
-						<th style="text-align: center" class="table-danger">SKU</th>
-						<th style="text-align: center" class="table-danger">DESCRIPCIÓN</th>
-						<th style="text-align: center" class="table-danger">PRECIO</th>
-						<th style="text-align: center" class="table-danger">DISPONIBLES</th>
-						<th style="text-align: center" class="table-danger">OPCIONES</th>
+						<th style="text-align: center" class="table-danger">FOLIO</th>
+						<th style="text-align: center" class="table-danger">FECHA DE VENTA</th>
+						<th style="text-align: center" class="table-danger">CANTIDAD DE PRODUCTOS</th>
+						<!-- <th style="text-align: center" class="table-danger">SUBTOTAL</th> -->
+						<th style="text-align: center" class="table-danger">TOTAL</th>
 
 					</thead>
 
 					<tbody>
-						<tr v-for="producto in filtroProductos">
-							<th>@{{producto.sku}}</th>
-							<td>@{{producto.nombre}}</td>
-							<td>$ @{{producto.precio}} MXN</td>
-							<td>@{{producto.cantidad}}</td>
-							<td>
-								<button class="btn" style="background-image: url(img/fondo4.jpg);" @click="editandoProducto(producto.sku)">
-									<!-- <i class="fa-solid fa-file-pen"></i> -->
-									<i class="fa-light fa-file-pen" style="color:white"></i>
-								</button>
-
-								<button class="btn" style="background-image: url(img/fondo4.jpg);" @click="eliminarProducto(producto.sku)">
-									<!-- <i class="fas fa-trash-alt"></i> -->
-									<i class="fa-light fa-trash" style="color:white"></i>
-								</button>
-							</td>
+						<tr v-for="apiVentashechas in filtrofechas">
+							<th>@{{apiVentashechas.folio}}</th>
+							<td>@{{apiVentashechas.fecha_venta}}</td>
+							<td>@{{apiVentashechas.num_articulos}} Productos</td>
+							<!-- <td>@{{apiVentashechas.subtotal}}</td> -->
+							<td>@{{apiVentashechas.total}}</td>
 						</tr>
 					</tbody>
 				</table>
@@ -90,7 +86,7 @@
 		</div>
 
 <!-- INICIA VENTANA MODAL -->
-<div class="modal fade" id="modalProductos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="modalProductos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -116,7 +112,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 <!-- FIN MODAL -->
 
 
@@ -128,7 +124,7 @@
 
 @push('scripts')
 	<script type="text/javascript" src="js/vue-resource.js"></script>
-	<script type="text/javascript" src="js/apis/apiProducto.js"></script>
+	<script type="text/javascript" src="js/apis/apiVentashechasc.js"></script>
 @endpush
 
 <input type="hidden" name="route" value="{{url('/')}}">

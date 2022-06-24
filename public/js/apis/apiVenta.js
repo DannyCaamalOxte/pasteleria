@@ -150,6 +150,7 @@ new Vue({
             console.log(json);
           });
         },
+        
 	},
 	// FIN DE METHODS
 

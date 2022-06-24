@@ -71,7 +71,7 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Apartados: </h6>
+                        <h6 class="collapse-header">Suc. Kimbila: </h6>
                         <a class="collapse-item" href="ventas">Panel de ventas</a>
                         <a class="collapse-item" href="productos">Inventario de productos</a>
                     </div>
@@ -87,7 +87,7 @@
                 </a>
                 <div id="collapsetres" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Apartados: </h6>
+                        <h6 class="collapse-header">Suc. Citilcum: </h6>
                         <a class="collapse-item" href="ventasc">Panel de ventas</a>
                         <a class="collapse-item" href="productosc">Inventario de productos</a>
                     </div>
@@ -103,7 +103,7 @@
                 </a>
                 <div id="collapsecuatro" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Apartados: </h6>
+                        <h6 class="collapse-header">Suc. Tekanto: </h6>
                         <a class="collapse-item" href="ventast">Panel de ventas</a>
                         <a class="collapse-item" href="productost">Inventario de productos</a>
                     </div>
@@ -112,7 +112,7 @@
 
 
             <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
+           <!--  <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-wrench"></i>
@@ -128,54 +128,70 @@
                         <a class="collapse-item" href="utilities-other.html">Other</a>
                     </div>
                 </div>
-            </li>
+            </li> -->
 
 
 
             
 
             <!-- Divider -->
+            <!-- <hr class="sidebar-divider"> -->
+
+
+
+            <!-- Nav Item - Dashboard -->
+            <!-- <li class="nav-item active">
+                <a class="nav-link" href="ventasHechas">
+                    <i class="fa-light fa-sack-dollar"></i> -->
+                    <!-- <i class="fas fa-fw fa-tachometer-alt"></i> -->
+                    <!-- <span>Detalles de ventas suc. Kimbila</span></a>
+            </li> -->
+
+           
+
+            <!-- Divider -->
             <hr class="sidebar-divider">
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Addons
+                Registros de ventas
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
                     aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Pages</span>
+                    <!-- <i class="fas fa-fw fa-folder"></i> -->
+                    <i class="fa-light fa-sack-dollar"></i>
+                    <span>Registros de ventas</span>
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="login.html">Login</a>
-                        <a class="collapse-item" href="register.html">Register</a>
-                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
-                        <div class="collapse-divider"></div>
+                        <h6 class="collapse-header">Sucursales</h6>
+                        <a class="collapse-item" href="ventasHechas">Kimbila</a>
+                        <a class="collapse-item" href="ventasHechasc">Citilcum</a>
+                        <a class="collapse-item" href="ventasHechast">Tekanto</a>
+                        <!-- <div class="collapse-divider"></div>
                         <h6 class="collapse-header">Other Pages:</h6>
                         <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item" href="blank.html">Blank Page</a>
+                        <a class="collapse-item" href="blank.html">Blank Page</a> -->
                     </div>
                 </div>
             </li>
 
             <!-- Nav Item - Charts -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="charts.html">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Charts</span></a>
-            </li>
+            </li> -->
 
             <!-- Nav Item - Tables -->
-            <li class="nav-item">
+           <!--  <li class="nav-item">
                 <a class="nav-link" href="tables.html">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Tables</span></a>
-            </li>
+            </li> -->
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">

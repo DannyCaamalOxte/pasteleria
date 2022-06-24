@@ -1,33 +1,34 @@
 @extends('layouts.master')
-@section('titulo','ventas Citilcum')
+@section('titulo','ventas suc. Kimbila')
 @section('contenido')
 	
 <div id="apiVentac">
 	
 	
 		<div class="row">
-			<div class="col-md-4">
+			<div class="col-md-6">
 
 				<div align="center">
 					<h4>panel de ventas suc. Citilcum</h4>
 				</div>
+				<br>
 
 				<div class="input-group mb-3">
 	  					<input type="text" class="form-control mb-3" placeholder="Escriba el codigo del producto" aria-label="Recipient's username" aria-describedby="basic-addon2" v-model="skuc"
 	  					v-on:keyup.enter="buscarProducto()">
 	  				<div class="input-group-append mb-3">
-	   					 <button class="btn btn-primary" type="button" @click="buscarProducto()">Añadir</button>
+	   					 <button class="btn btn-primary" style="background-image: url(img/fondo4.jpg);" type="button" @click="buscarProducto()">Añadir</button>
 
 	  				</div>
-	  				<div class="input-group-append mb-3">
+	  				<!-- <div class="input-group-append mb-3">
 	  					<button class="btn btn-success" type="button" @click="mostrarCobro()">Cobrar</button>
-	  				</div>
+	  				</div> -->
 	  				<div class="input-group-append mb-3">
-	  					<button class="btn btn-success" type="button" @click="mostrarBusqueda()">Buscar</button>
+	  					<button class="btn btn-success" style="background-image: url(img/fondo4.jpg);" type="button" @click="mostrarBusqueda()">Buscar</button>
 	  				</div>
-	  				<div class="input-group-append mb-3">
+	  				<!-- <div class="input-group-append mb-3">
 	  					<a href="productos">Registrar nuevo producto</a>
-	  				</div>
+	  				</div> -->
 
 				</div>
 
@@ -111,10 +112,13 @@
 					 	</tr>
 						
 						<tr>
-							<th style="text-align: center" class="table-danger">Articulos :</th>
+							<th style="text-align: center" class="table-danger">Num. PRODUCTOS :</th>
 							<td>@{{noArticulos}}</td>
 						</tr>
-					</table> 
+					</table>
+					<div class="input-group-append mb-3">
+	  					<button class="btn btn-success" style="background-image: url(img/fondo4.jpg);" type="button" @click="mostrarCobro()">Cobrar</button>
+	  				</div>
 				
 			</div>
 			<!-- FIN DEL CARD BODY -->

@@ -9,7 +9,7 @@ class ventac extends Model
 {
     //
     protected $with=['detalles'];
-    protected $table='ventas';
+    protected $table='ventasc';
     protected $primaryKey='folio';
     public $incrementing=false;
     public $timestamps=false;

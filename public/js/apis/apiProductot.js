@@ -66,7 +66,7 @@ new Vue({
           $('#modalProductos').modal('hide');
         },
          eliminarProducto:function(id){
-            var confir = confirm('¿Desea eliminar el postre?');
+            var confir = confirm('¿Desea eliminar el producto?');
 
             if (confir) {
                this.$http.delete(apiProductot + '/' + id).then(function(json){
@@ -95,6 +95,7 @@ new Vue({
           });
 
           $('#modalProductos').modal('hide');
+          
           console.log(productot);
         },
 

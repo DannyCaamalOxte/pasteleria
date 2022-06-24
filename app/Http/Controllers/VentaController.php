@@ -20,6 +20,7 @@ class VentaController extends Controller
     {
         // 
         //return 'hhh';
+        return Venta::all();
        
     }
 
@@ -111,7 +112,7 @@ class VentaController extends Controller
 
         $pdf->setFont('Arial','B',7);
         //DISEÑO DE TICKET
-        $pdf->Cell(60,2,'ABARROTES LA LUPITA',0,1,'C');
+        $pdf->Cell(60,2,'PASTELERÍA MARTHA',0,1,'C');
         $pdf->ln();
         $pdf->Cell(10,2,'FOLIO: ',0,0,'L');
         //celdaque va a traer eldato dl folio
