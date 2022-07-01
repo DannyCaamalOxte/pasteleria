@@ -28,6 +28,7 @@ Route::view('productost','productost');
 Route::view('ventasHechas','ventasHechas');
 Route::view('ventasHechasc','ventasHechasc');
 Route::view('ventasHechast','ventasHechast');
+Route::view('pedidos','pedidos');
 
 //apis
 Route::apiResource('apiProducto','ProductoController');
@@ -37,10 +38,15 @@ Route::apiResource('apiVentat','VentatController');
 Route::apiResource('apiVentashechas','VentashechasController');
 Route::apiResource('apiProductoc','ProductocController');
 Route::apiResource('apiProductot','ProductotController');
+Route::apiResource('apiPedido','PedidoController');
 
 //generar ticket
 Route::get('ticket/{folio}',[
 			'as'=>'ticket',
 			'uses'=>'VentaController@ticket'
 ]);
-
+//tekanto
+Route::get('ticketT/{folio}',[
+			'as'=>'ticket',
+			'uses'=>'VentatController@tickett'
+]);

@@ -31,7 +31,7 @@
 						</div> -->
 
 						<div class="input-group mb-1">
-							<p>Proporcione la fecha para calcular</p>
+							<p>Proporcione el rango de fecha para calcular</p>
 						</div>
 						<div class="input-group">
 							<input type="date" class="col-md-2 form-control" v-model="buscar2">
@@ -56,7 +56,7 @@
 						<th style="text-align: center" class="table-danger">FOLIO</th>
 						<th style="text-align: center" class="table-danger">FECHA DE VENTA</th>
 						<th style="text-align: center" class="table-danger">CANTIDAD DE PRODUCTOS</th>
-						<!-- <th style="text-align: center" class="table-danger">SUBTOTAL</th> -->
+						<th style="text-align: center" class="table-danger">TICKET</th>
 						<th style="text-align: center" class="table-danger">TOTAL</th>
 
 					</thead>
@@ -66,6 +66,9 @@
 							<th>@{{apiVentashechas.folio}}</th>
 							<td>@{{apiVentashechas.fecha_venta}}</td>
 							<td>@{{apiVentashechas.num_articulos}} Productos</td>
+							<td>
+								<a href="{{ url('ticket/VNTKIM-220621124443') }}">Ver/imp ticket</a>
+							</td>
 							<!-- <td>@{{apiVentashechas.subtotal}}</td> -->
 							<td>$ @{{apiVentashechas.total}} MXN</td>
 						</tr>

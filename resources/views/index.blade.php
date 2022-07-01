@@ -11,17 +11,21 @@
     <div class="card card border-success">
       <div class="card-body">
         <h5 class="card-title">Admnistrador de ventas</h5>
-        <p class="card-text">acceda para administrar las ventas.</p>
-        <a href="ventas" class="btn btn-primary">Ir a panel de ventas</a>
+        <p class="card-text">Acceda para administrar las ventas de las diferentes sucursales.</p>
+        <a href="ventas" class="btn btn-primary" style="background-image: url(img/fondo4.jpg);">Kimbila</a>
+        <a href="ventasc" class="btn btn-primary" style="background-image: url(img/fondo4.jpg);">Citilcum</a>
+        <a href="ventast" class="btn btn-primary" style="background-image: url(img/fondo4.jpg);">Tekanto</a>
       </div>
     </div>
   </div>
   <div class="col-sm-6">
     <div class="card card border-warning">
       <div class="card-body">
-        <h5 class="card-title">Inventario de productos suc. Kimbila</h5>
-        <p class="card-text">Acceda para administrar todos los postres y productos de la sucursal de Kimbila.</p>
-        <a href="productos" class="btn btn-primary">Acceder</a>
+        <h5 class="card-title">Inventario y administración de los productos</h5>
+        <p class="card-text">Acceda para administrar todos los postres y productos de las sucursales.</p>
+        <a href="productos" class="btn btn-primary" style="background-image: url(img/fondo4.jpg);">kimbila</a>
+        <a href="productosc" class="btn btn-primary" style="background-image: url(img/fondo4.jpg);">Citilcum</a>
+        <a href="productost" class="btn btn-primary" style="background-image: url(img/fondo4.jpg);">Tekanto</a>
       </div>
     </div>
   </div>
@@ -31,18 +35,20 @@
   <div class="col-sm-6">
     <div class="card card border-danger">
       <div class="card-body">
-        <h5 class="card-title">Inventario de productos suc. Citilcum</h5>
-        <p class="card-text">Acceda para administrar todos los postres y productos de la sucursal de Citilcum.</p>
-        <a href="productosc" class="btn btn-primary">Acceder</a>
+        <h5 class="card-title">Historial de ventas</h5>
+        <p class="card-text">Acceda para administrar las ventas de las sucursales.</p>
+        <a href="ventasHechas" class="btn btn-primary" style="background-image: url(img/fondo4.jpg);">Kimbila</a>
+        <a href="ventasHechasc" class="btn btn-primary" style="background-image: url(img/fondo4.jpg);">Citilcum</a>
+        <a href="ventasHechast" class="btn btn-primary" style="background-image: url(img/fondo4.jpg);">Tekanto</a>
       </div>
     </div>
   </div>
   <div class="col-sm-6">
     <div class="card card border-info">
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="productos" class="btn btn-primary">Go somewhere</a>
+        <h5 class="card-title">Pedidos</h5>
+        <p class="card-text">Acceda para adminstrar y ver los pedidos de las sucursales.</p>
+        <a href="pedidos" class="btn btn-primary" style="background-image: url(img/fondo4.jpg);">Aceeder</a>
       </div>
     </div>
   </div>
@@ -58,9 +64,10 @@
 </div>
 				
 			</div>
-
-
 			<!--fin de card-->
+      <div align="center">
+      <img src="img/martha.png" width="120" height="120">
+    </div>
 
 	
 

@@ -50,7 +50,7 @@
             <li class="nav-item active">
                 <a class="nav-link" href="index">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Inicio</span></a>
+                    <span>Index</span></a>
             </li>
 
             <!-- Divider -->
@@ -177,6 +177,16 @@
                         <a class="collapse-item" href="blank.html">Blank Page</a> -->
                     </div>
                 </div>
+            </li>
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="pedidos">
+                    <!-- <i class="fas fa-fw fa-tachometer-alt"></i> -->
+                    <i class="fa-light fa-calendar-day"></i>
+                    <span>Pedidos</span></a>
             </li>
 
             <!-- Nav Item - Charts -->
@@ -316,7 +326,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
+                        <span>Danny C &copy; Pastelería Martha 2022</span>
                     </div>
                 </div>
             </footer>

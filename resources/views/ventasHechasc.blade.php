@@ -30,7 +30,7 @@
 						<input type="text" placeholder="Nombre del producto" class="form-control" v-model="buscar">
 						</div> -->
 
-						<div class="col-md-6">
+						<!-- <div class="col-md-6">
 							<p align="left">Escriba la fecha para realizar búsqueda</p>
 						<input type="date" class="form-control" v-model="buscar2">
 						<input type="date" class="form-control" v-model="buscar3">
@@ -38,7 +38,20 @@
 							<div class="col">
               			<label for="inputfolio">Total</label>
               			<input type="number" class="form-control" disabled="" :value="totalNeto">
-            				</div>
+            				</div> -->
+            				<div class="input-group mb-1">
+							<p>Proporcione el rango de fecha para calcular</p>
+						</div>
+						<div class="input-group">
+							<input type="date" class="col-md-2 form-control" v-model="buscar2">
+						<p> al </p>
+						<input type="date" class="col-md-2 form-control" v-model="buscar3">							
+						</div>
+						<br>
+						<div class="input-group">
+              <label for="inputfolio">Total de ventas: </label>
+              <input class="col-md-1 form-control" type="number" disabled="" :value="totalNeto">
+            </div>
 
 					</div>
 

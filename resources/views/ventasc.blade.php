@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('titulo','ventas suc. Kimbila')
+@section('titulo','ventas suc. Citilcum')
 @section('contenido')
 	
 <div id="apiVentac">

@@ -100,7 +100,7 @@ class VentatController extends Controller
     {
         //
     }
-    public function ticket($folio)
+    public function tickett($folio)
     {
         $ventat= Ventat::find($folio);
         $altura=100;
@@ -116,9 +116,9 @@ class VentatController extends Controller
         $pdf->ln();
         $pdf->Cell(10,2,'FOLIO: ',0,0,'L');
         //celdaque va a traer eldato dl folio
-        $pdf->Cell(25,2,$venta->folio,0,0,'L');
+        $pdf->Cell(25,2,$ventat->folio,0,0,'L');
         $pdf->Cell(11,2,'FECHA: ',0,0,'L');
-        $pdf->Cell(14,2,$venta->fecha_venta,0,1,'L');
+        $pdf->Cell(14,2,$ventat->fecha_venta,0,1,'L');
         $pdf->Cell(60,1,'','B','C');
         $pdf->ln(2);
         $pdf->setFont('Arial','B',6);
@@ -129,12 +129,12 @@ class VentatController extends Controller
         $pdf->Cell(10,2.5,'TOTAL',1,1,'C');
         $pdf->ln();
 
-        $detalles=$venta->detalles;
+        $detalles=$ventat->detalles;
         foreach ($detalles as $detalle) {
-            $pdf->Cell(10,2,$detalle->sku,0,0,'C');
-            $pdf->Cell(22,2,$detalle->productos->nombre,0,0,'C');
-            $pdf->Cell(8,2,$detalle->cantidad,0,0,'C');
-            $pdf->Cell(10,2,$detalle->precio,0,0,'C');
+            $pdf->Cell(10,2,$detalle->skut,0,0,'C');
+            $pdf->Cell(22,2,$detalle->productost->nombret,0,0,'C');
+            $pdf->Cell(8,2,$detalle->cantidadt,0,0,'C');
+            $pdf->Cell(10,2,$detalle->preciot,0,0,'C');
             $pdf->Cell(10,2,$detalle->total,0,1,'C');
             
         }
