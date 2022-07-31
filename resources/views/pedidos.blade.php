@@ -32,7 +32,9 @@
 						</div>
 						<div class="input-group">
 							<input type="date" class="col-md-2 form-control" v-model="buscar2">
+							&nbsp;
 						<p> al </p>
+						&nbsp;
 						<input type="date" class="col-md-2 form-control" v-model="buscar3">							
 						</div>
 						</div>
@@ -53,14 +55,18 @@
 					<thead>
 						<th style="text-align: center" class="table-danger" hidden="">SKU</th>
 						<th style="text-align: center" class="table-danger">CLIENTE</th>
-						<th style="text-align: center" class="table-danger">COLOR</th>
-						<th style="text-align: center" class="table-danger">SABOR</th>
+						<!-- <th style="text-align: center" class="table-danger">COLOR</th> -->
+						<!-- <th style="text-align: center" class="table-danger">SABOR Y COBERTURA</th>
 						<th style="text-align: center" class="table-danger">TEXTO</th>
-						<th style="text-align: center" class="table-danger">FECHA</th>
-						<th style="text-align: center" class="table-danger">HORA</th>
+						<th style="text-align: center" class="table-danger">TAMAÑO</th> -->
+						<th style="text-align: center" class="table-danger">FECHA DE ENTREGA</th>
+						<!-- <th style="text-align: center" class="table-danger">HORA</th> -->
 						<th style="text-align: center" class="table-danger">SUCURSAL</th>
-						<th style="text-align: center" class="table-danger">TÉLEFONO</th>
-						<th style="text-align: center" class="table-danger">PRECIO</th>
+						<th style="text-align: center" class="table-danger">DETALLES</th>
+						<!-- <th style="text-align: center" class="table-danger">TÉLEFONO</th> -->
+						<!-- <th style="text-align: center" class="table-danger">ANTICIPO</th>
+						<th style="text-align: center" class="table-danger">SALDO</th>
+						<th style="text-align: center" class="table-danger">PRECIO</th> -->
 						<th style="text-align: center" class="table-danger">OPCIONES</th>
 
 					</thead>
@@ -69,14 +75,26 @@
 						<tr v-for="pedido in filtrofechas">
 							<th hidden="">@{{pedido.skup}}</th>
 							<td>@{{pedido.nombrep}}</td>
-							<td>@{{pedido.color}}</td>
-							<td>@{{pedido.sabor}}</td>
+							<!-- <td>@{{pedido.color}}</td> -->
+							<!-- <td>@{{pedido.sabor}}</td>
 							<td>@{{pedido.texto}}</td>
+							<td>@{{pedido.tamanio}}</td> -->
 							<td>@{{pedido.fecha}}</td>
-							<td>@{{pedido.hora}}</td>
+							<!-- <td>@{{pedido.hora}}</td> -->
 							<td>@{{pedido.sucursal}}</td>
-							<td>@{{pedido.telefono}}</td>
-							<td>$ @{{pedido.preciop}} MXN</td>
+							<td>
+								
+								<button class="btn" @click="detallandoProducto(pedido.skup)">
+									<i class="fa-solid fa-file-pen"></i>
+									<!-- <i class="fa-light fa-file-pen" style="color:white"></i> -->
+									
+								</button>
+
+							</td>
+							<!-- <td>@{{pedido.telefono}}</td> -->
+							<!-- <td>$ @{{pedido.anticipo}} MXN</td>
+							<td>$ @{{pedido.saldo}} MXN</td>
+							<td>$ @{{pedido.preciop}} MXN</td> -->
 							<td>
 								<button class="btn" style="background-image: url(img/fondo4.jpg);" @click="editandoProducto(pedido.skup)">
 									<!-- <i class="fa-solid fa-file-pen"></i> -->
@@ -122,24 +140,90 @@
       </div>
       <div class="modal-body">
         <!-- <input type="number" class="form-control" placeholder="Escriba el sku" v-model="skup"><br> -->
+        Nombre del cliente:
         <input type="text" class="form-control" placeholder="Nombre del cliente" v-model="nombrep"><br>
+        Color del pastel:
         <input type="text" class="form-control" placeholder="Color del pastel" v-model="color"><br>
+        Sabor del pastel:
         <input type="text" class="form-control" placeholder="Sabor del pastel" v-model="sabor"><br>
+        Texto del pastel:
         <input type="text" class="form-control" placeholder="Texto del pastel" v-model="texto"><br>
+        Tamaño del pastel:
+        <input type="text" class="form-control" placeholder="Tamaño del pastel" v-model="tamanio"><br>
+        Fecha de entrega:
         <input type="date" class="form-control" placeholder="Fecha de entrega" v-model="fecha"><br>
+        Hora de entrega:
         <input type="time" class="form-control" placeholder="Hora de entrega" v-model="hora"><br>
+        Sucursal:
         <input type="text" class="form-control" placeholder="Sucursal" v-model="sucursal"><br>
+        Télefono:
         <input type="text" class="form-control" placeholder="Télefono" v-model="telefono"><br>
-        <input type="number" class="form-control" placeholder="Escriba precio" v-model="preciop"><br>
+        Anticipo:
+        <input type="number" class="form-control" placeholder="Anticipo" v-model="anticipo"><br>
+        Saldo:
+        <input type="number" class="form-control" placeholder="Saldo" v-model="saldo"><br>
+        Precio total:
+        <input type="number" class="form-control" placeholder="Precio total" v-model="preciop"><br>
+
+   
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-image: url(img/fondo4.jpg);">Cerrar</button>
+        <button type="button" class="btn btn-primary" @click="guardarProducto()" v-if="agregando==true" style="background-image: url(img/fondo4.jpg);">Guardar</button>
+
+        <button type="button" class="btn btn-primary" @click="actualizarProducto()" v-if="agregando==false" style="background-image: url(img/fondo4.jpg);">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- FIN MODAL -->
+
+<!-- INICIA VENTANA MODAL -->
+<div class="modal fade" id="modalProductosDetalles" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" v-if="agregando==true">AGREGANDO PEDIDO</h5>
+        <h5 class="modal-title" id="exampleModalLabel" v-if="agregando==false">DETALLES DEL PEDIDO</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- <input type="number" class="form-control" placeholder="Escriba el sku" v-model="skup"><br> -->
+        Nombre del cliente:
+        <input type="text" class="form-control" disabled="" placeholder="Nombre del cliente" v-model="nombrep"><br>
+        Color del pastel:
+        <input type="text" class="form-control" disabled="" placeholder="Color del pastel" v-model="color"><br>
+        Sabor del pastel:
+        <input type="text" class="form-control" disabled="" placeholder="Sabor del pastel" v-model="sabor"><br>
+        Texto del pastel:
+        <input type="text" class="form-control" disabled="" placeholder="Texto del pastel" v-model="texto"><br>
+        Tamaño del pastel:
+        <input type="text" class="form-control" disabled="" placeholder="Tamaño del pastel" v-model="tamanio"><br>
+        Fecha de entrega:
+        <input type="date" class="form-control" disabled="" placeholder="Fecha de entrega" v-model="fecha"><br>
+        Hora de entrega:
+        <input type="time" class="form-control" disabled="" placeholder="Hora de entrega" v-model="hora"><br>
+        Sucursal:
+        <input type="text" class="form-control" disabled="" placeholder="Sucursal" v-model="sucursal"><br>
+        Télefono:
+        <input type="text" class="form-control" disabled="" placeholder="Télefono" v-model="telefono"><br>
+        Anticipo:
+        <input type="number" class="form-control" disabled="" placeholder="Anticipo" v-model="anticipo"><br>
+        Saldo:
+        <input type="number" class="form-control" disabled="" placeholder="Saldo" v-model="saldo"><br>
+        Precio total:
+        <input type="number" class="form-control" disabled="" placeholder="Precio total" v-model="preciop"><br>
        
 
    
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary" @click="guardarProducto()" v-if="agregando==true" style="background-image: url(img/fondo4.jpg);">Guardar</button>
+        <button type="button" class="btn btn-secondary" style="background-image: url(img/fondo4.jpg);" data-dismiss="modal">Cerrar</button>
+        <!-- <button type="button" class="btn btn-primary" @click="guardarProducto()" v-if="agregando==true" style="background-image: url(img/fondo4.jpg);">Guardar</button>
 
-        <button type="button" class="btn btn-primary" @click="actualizarProducto()" v-if="agregando==false">Guardar</button>
+        <button type="button" class="btn btn-primary" @click="actualizarProducto()" v-if="agregando==false">Guardar</button> -->
       </div>
     </div>
   </div>

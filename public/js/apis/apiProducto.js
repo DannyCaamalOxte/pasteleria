@@ -11,6 +11,7 @@ new Vue({
 
       data:{
           productos:[],
+          info:[],
           nombre:'',
           precio:'',
           cantidad:'',

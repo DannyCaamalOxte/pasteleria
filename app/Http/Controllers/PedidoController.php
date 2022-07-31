@@ -32,10 +32,13 @@ class PedidoController extends Controller
         $pedido->color=$request->get('color');
         $pedido->sabor=$request->get('sabor');
         $pedido->texto=$request->get('texto');
+        $pedido->tamanio=$request->get('tamanio');
         $pedido->fecha=$request->get('fecha');
         $pedido->hora=$request->get('hora');
         $pedido->sucursal=$request->get('sucursal');
         $pedido->telefono=$request->get('telefono');
+        $pedido->anticipo=$request->get('anticipo');
+        $pedido->saldo=$request->get('saldo');
         $pedido->preciop=$request->get('preciop');
         $pedido->save();
 
@@ -67,10 +70,13 @@ class PedidoController extends Controller
         $pedido->color=$request->get('color');
         $pedido->sabor=$request->get('sabor');
         $pedido->texto=$request->get('texto');
+        $pedido->tamanio=$request->get('tamanio');
         $pedido->fecha=$request->get('fecha');
         $pedido->hora=$request->get('hora');
         $pedido->sucursal=$request->get('sucursal');        
         $pedido->telefono=$request->get('telefono');
+        $pedido->anticipo=$request->get('anticipo');
+        $pedido->saldo=$request->get('saldo');
         $pedido->preciop=$request->get('preciop');
         $pedido->update();
 

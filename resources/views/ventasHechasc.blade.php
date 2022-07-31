@@ -44,12 +44,15 @@
 						</div>
 						<div class="input-group">
 							<input type="date" class="col-md-2 form-control" v-model="buscar2">
+							&nbsp;
 						<p> al </p>
+						&nbsp;
 						<input type="date" class="col-md-2 form-control" v-model="buscar3">							
 						</div>
 						<br>
 						<div class="input-group">
               <label for="inputfolio">Total de ventas: </label>
+              &nbsp;
               <input class="col-md-1 form-control" type="number" disabled="" :value="totalNeto">
             </div>
 
@@ -89,9 +92,9 @@
 			</div>  
 			<!-- FIN DE COL-MD-12 -->
 
-			<div class="input-group-append mb-2">
+			<!-- <div class="input-group-append mb-2">
 	  					<a href="ventas">Regresar al punto de venta</a>
-	  				</div>
+	  				</div> -->
 		</div>
 		<!--fin del row-->
 		<div align="center">

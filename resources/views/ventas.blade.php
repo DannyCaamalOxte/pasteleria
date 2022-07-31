@@ -127,9 +127,9 @@
 		<!-- FIN DEL CARD -->
 	</div>
 			<!-- FIN DEL COL-MD-4 -->
-			<div class="input-group-append mb-3">
+			<!-- <div class="input-group-append mb-3">
 	  					<a href="productos">Registrar nuevo producto</a>
-	  				</div>
+	  				</div> -->
 </div>
 
 <!-- Modal para el formulario del registro de los moovimientos -->
@@ -164,8 +164,8 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary" @click="vender()">Guardar</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-image: url(img/fondo4.jpg);">Cerrar</button>
+        <button type="button" class="btn btn-primary" @click="vender()" style="background-image: url(img/fondo4.jpg);">Guardar</button>
       </div>
     </div>
   </div>
@@ -223,8 +223,8 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary" @click="buscarProducto()" ::="sku" data-dismiss="modal">Agregar y cerrar</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-image: url(img/fondo4.jpg);">Cerrar</button>
+        <button type="button" class="btn btn-primary" @click="buscarProducto()" ::="sku" data-dismiss="modal" style="background-image: url(img/fondo4.jpg);">Agregar y cerrar</button>
       </div>
     </div>
   </div>

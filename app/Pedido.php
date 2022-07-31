@@ -21,10 +21,13 @@ class Pedido extends Model
         'color',
         'sabor',
         'texto',
+        'tamanio',
         'fecha',
         'hora',
         'sucursal',
         'telefono',
+        'anticipo',
+        'saldo',
     	'preciop'
     ];
 

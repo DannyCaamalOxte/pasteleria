@@ -80,9 +80,9 @@
 			</div>  
 			<!-- FIN DE COL-MD-12 -->
 
-			<div class="input-group-append mb-2">
+			<!-- <div class="input-group-append mb-2">
 	  					<a href="ventas">Regresar al punto de venta</a>
-	  				</div>
+	  				</div> -->
 		</div>
 		<!--fin del row-->
 		<div align="center">
@@ -101,18 +101,22 @@
         </button>
       </div>
       <div class="modal-body">
+      	Escriba el sku:
         <input type="number" class="form-control" placeholder="Escriba el sku" v-model="skut"><br>
+        Nombre del producto:
         <input type="text" class="form-control" placeholder="Nombre del producto" v-model="nombret"><br>
-        <input type="number" class="form-control" placeholder="Escriba precio" v-model="preciot"><br>
-        <input type="number" class="form-control" placeholder="Escriba la cantidad" v-model="cantidadt"><br>
+        Precio:
+        <input type="number" class="form-control" placeholder="Precio" v-model="preciot"><br>
+        Cantidad de productos:
+        <input type="number" class="form-control" placeholder="Cantidad de productos" v-model="cantidadt"><br>
 
    
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-image: url(img/fondo4.jpg);">Cerrar</button>
         <button type="button" class="btn btn-primary" @click="guardarProducto()" v-if="agregando==true" style="background-image: url(img/fondo4.jpg);">Guardar</button>
 
-        <button type="button" class="btn btn-primary" @click="actualizarProducto()" v-if="agregando==false">Guardar</button>
+        <button type="button" class="btn btn-primary" @click="actualizarProducto()" v-if="agregando==false" style="background-image: url(img/fondo4.jpg);">Guardar</button>
       </div>
     </div>
   </div>

@@ -15,10 +15,13 @@ new Vue({
           color:'',
           sabor:'',
           texto:'',
+          tamanio:'',
           fecha:'',
           hora:'',
           sucursal:'',
           telefono:'',
+          anticipo:'',
+          saldo:'',
           preciop:'',
           cantidadc:'',
           agregando:true,
@@ -54,10 +57,13 @@ new Vue({
           this.color='';
           this.sabor='';
           this.texto='';
+          this.tamanio='';
           this.fecha='';
           this.hora='';
           this.sucursal='';
           this.telefono='';
+          this.anticipo='';
+          this.saldo='';
           this.preciop='';
           $('#modalProductos').modal('show');
         },
@@ -69,23 +75,48 @@ new Vue({
             this.color=json.data.color;
             this.sabor=json.data.sabor;
             this.texto=json.data.texto;
+            this.tamanio=json.data.tamanio;
             this.fecha=json.data.fecha;
             this.hora=json.data.hora;
             this.sucursal=json.data.sucursal;
             this.telefono=json.data.telefono;
+            this.anticipo=json.data.anticipo;
+            this.saldo=json.data.saldo;
             this.preciop=json.data.preciop;
           });
           $('#modalProductos').modal('show');
+        },
+        detallandoProducto:function(id){
+          this.agregando=false;
+          this.skup=id;
+          this.$http.get(apiPedido + '/' + id).then(function(json){
+            this.nombrep=json.data.nombrep;
+            this.color=json.data.color;
+            this.sabor=json.data.sabor;
+            this.texto=json.data.texto;
+            this.tamanio=json.data.tamanio;
+            this.fecha=json.data.fecha;
+            this.hora=json.data.hora;
+            this.sucursal=json.data.sucursal;
+            this.telefono=json.data.telefono;
+            this.anticipo=json.data.anticipo;
+            this.saldo=json.data.saldo;
+            this.preciop=json.data.preciop;
+          });
+          $('#modalProductosDetalles').modal('show');
         },
         actualizarProducto:function(){
           var jsonPedido = {nombrep:this.nombrep,
                               color:this.color,
                               sabor:this.sabor,
                               texto:this.texto,
+                              tamanio:this.tamanio,
                               fecha:this.fecha,
                               hora:this.hora,
                               sucursal:this.sucursal,
                               telefono:this.telefono,
+                              anticipo:this.anticipo,
+                              saldo:this.saldo,
                               preciop:this.preciop};
           this.$http.patch(apiPedido + '/' + this.skup,jsonPedido).then(function(json){
             this.obtenerProductos();
@@ -110,10 +141,13 @@ new Vue({
             color:this.color,
             sabor:this.sabor,
             texto:this.texto,
+            tamanio:this.tamanio,
             fecha:this.fecha,
             hora:this.hora,
             sucursal:this.sucursal,
             telefono:this.telefono,
+            anticipo:this.anticipo,
+            saldo:this.saldo,
             preciop:this.preciop,
             skup:this.skup
           };
@@ -124,10 +158,13 @@ new Vue({
             this.color='';
             this.sabor='';
             this.texto='';
+            this.tamanio='';
             this.fecha='';
             this.hora='';
             this.sucursal='';
             this.telefono='';
+            this.anticipo='';
+            this.saldo='';
             this.preciop='';
           }).catch(function(json){
             console.log(json);

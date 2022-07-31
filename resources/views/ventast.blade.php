@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('titulo','ventas suc. Kimbila')
+@section('titulo','ventas suc. Tekanto')
 @section('contenido')
 	
 <div id="apiVentat">
@@ -160,8 +160,8 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary" @click="vender()">Guardar</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-image: url(img/fondo4.jpg);">Cerrar</button>
+        <button type="button" class="btn btn-primary" @click="vender()" style="background-image: url(img/fondo4.jpg);">Guardar</button>
       </div>
     </div>
   </div>
@@ -219,8 +219,8 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary" @click="buscarProducto()" ::="skut" data-dismiss="modal">Agregar y cerrar</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-image: url(img/fondo4.jpg);">Cerrar</button>
+        <button type="button" class="btn btn-primary" @click="buscarProducto()" ::="skut" data-dismiss="modal" style="background-image: url(img/fondo4.jpg);">Agregar y cerrar</button>
       </div>
     </div>
   </div>

@@ -2,6 +2,7 @@ function init(){
 var ruta = document.querySelector("[name=route]").value;
 
 var Ventashechas=ruta + '/apiVenta';
+var apiDetalles=ruta + '/apiDetalles';
 
 new Vue({
 
@@ -26,11 +27,20 @@ new Vue({
 		buscar:'',
 		buscar2:'',
 		buscar3:'',
+
+		// detas:[],
+		// id:'',
+		// cantidad:'',
+		// precio:'',
+		// total:'',
+		// sku:'',
+		// folio:'',
 	},
 
 	
 	created:function(){
         this.obtenerVentas();
+        this.obtenerDetalles();
       },
 	
 
@@ -45,8 +55,17 @@ new Vue({
             console.log(json);
           });
         },
+        // obtenerDetalles:function(){
+        //   this.$http.get(apiDetalles).then(function(json){
+        //     this.detas=json.data;
+        //     console.log(json.data)
+        //   }).catch(function(json){
+        //     console.log(json);
+        //   });
+        // },
         
 	},
+	
 	// FIN DE METHODS
 
 

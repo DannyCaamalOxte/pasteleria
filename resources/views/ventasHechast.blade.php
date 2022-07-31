@@ -44,12 +44,15 @@
 						</div>
 						<div class="input-group">
 							<input type="date" class="col-md-2 form-control" v-model="buscar2">
+							&nbsp;
 						<p> al </p>
+						&nbsp;
 						<input type="date" class="col-md-2 form-control" v-model="buscar3">							
 						</div>
 						<br>
 						<div class="input-group">
               <label for="inputfolio">Total de ventas: </label>
+              &nbsp;
               <input class="col-md-1 form-control" type="number" disabled="" :value="totalNeto">
             </div>
 
@@ -76,7 +79,11 @@
 							<td>@{{apiVentashechas.fecha_venta}}</td>
 							<td>@{{apiVentashechas.num_articulos}} Productos</td>
 							<td>
-								<a href="{{ url('/ticket/{folio}') }}">Ver/imp ticket</a>
+								<button class="btn" @click="detallandoProducto">
+									<i class="fa-solid fa-file-pen"></i>
+									<!-- <i class="fa-light fa-file-pen" style="color:white"></i> -->
+									
+								</button>
 								
 								</td>
 							<td>@{{apiVentashechas.total}}</td>
@@ -104,7 +111,42 @@
 		<div align="center">
 			<img src="img/martha.png" width="120" height="120">
 		</div>
+<!-- INICIA VENTANA MODAL -->
+<div class="modal fade" id="modalProductosDetalles" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">AGREGANDO PEDIDO</h5>
+        
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- <input type="number" class="form-control" placeholder="Escriba el sku" v-model="skup"><br> -->
+        
+        Escriba el sku:
+        <input type="number" class="form-control" placeholder="Escriba el sku" v-model="skut"><br>
+        Nombre del producto:
+        <input type="text" class="form-control" placeholder="Nombre del producto" v-model="nombret"><br>
+        Precio:
+        <input type="number" class="form-control" placeholder="Precio" v-model="preciot"><br>
+        Cantidad de productos:
+        <input type="number" class="form-control" placeholder="Cantidad de productos" v-model="cantidadt"><br>
+       
 
+   
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" style="background-image: url(img/fondo4.jpg);" data-dismiss="modal">Cerrar</button>
+        <!-- <button type="button" class="btn btn-primary" @click="guardarProducto()" v-if="agregando==true" style="background-image: url(img/fondo4.jpg);">Guardar</button>
+
+        <button type="button" class="btn btn-primary" @click="actualizarProducto()" v-if="agregando==false">Guardar</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- FIN MODAL -->
 <!-- INICIA VENTANA MODAL -->
 <!-- <div class="modal fade" id="modalProductos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">

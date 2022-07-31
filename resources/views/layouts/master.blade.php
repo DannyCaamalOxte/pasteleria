@@ -36,9 +36,10 @@
         <ul class="navbar-nav sidebar-dark sidebar accordion toggled" id="accordionSidebar" style="background-image: url(img/fondo4.jpg);">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index" >
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" >
                 <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fa-light fa-cake-candles"></i>
+                    <img src="img/martha.png" width="80" height="80">
+                   <!--  <i class="fa-light fa-cake-candles"></i> -->
                 </div>
                 <div class="sidebar-brand-text mx-3">Pastelería Martha</div>
             </a>
@@ -48,9 +49,10 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Index</span></a>
+                <a class="nav-link" href="inicio">
+                    <!-- <i class="fas fa-fw fa-tachometer-alt"></i> -->
+                    <i class="fa-light fa-house-chimney"></i>
+                    <span>Inicio</span></a>
             </li>
 
             <!-- Divider -->
@@ -212,12 +214,12 @@
             </div>
 
             <!-- Sidebar Message -->
-            <div class="sidebar-card d-none d-lg-flex">
+            <!-- <div class="sidebar-card d-none d-lg-flex">
                 <img class="sidebar-card-illustration mb-4" src="img/martha.png" alt="...">
-                <!-- <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="..."> -->
+                <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="...">
                 <p class="text-center mb-2"><strong>Martha Pasteleria</strong> is packed with premium features, components, and more!</p>
                 <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
-            </div>
+            </div> -->
 
         </ul>
         <!-- End of Sidebar -->
@@ -276,33 +278,46 @@
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                            @if(auth()->check())
+                <li>
+                  <br>
+                  <p>Bienvenid@: <b>{{auth()->user()->name}}</b></p>
+
+                </li>
+                <div class="topbar-divider d-none d-sm-block"></div>
+                <li><a href="{{ route('login.destroy') }}" class="btn btn-outline-danger">Cerrar sesión</a></li>
+                @else
+                <li><a href="{{ route('login.index') }}">Iniciar</a></li>
+                <li><a href="{{ route('register.index') }}">Registrar</a></li>
+
+                @endif
+                            <!-- <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Martha Pasteleria</span>
                                 <img class="img-profile rounded-circle"
                                     src="img/martha.png">
-                            </a>
+                            </a> -->
                             <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
-                                </a>
+                            <!-- <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown"> -->
+                                <!-- <a class="dropdown-item" href="">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i> -->
+                                    
+                                <!-- </a>
                                 <a class="dropdown-item" href="#">
                                     <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
+                                    Iniciar sesión
                                 </a>
                                 <a class="dropdown-item" href="#">
                                     <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
-                                </a>
-                                <div class="dropdown-divider"></div>
+                                    Registrarse
+                                </a> -->
+                                <!-- <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
-                                </a>
-                            </div>
+                                </a> -->
+                            <!-- </div> -->
                         </li>
 
                     </ul>
@@ -326,7 +341,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Danny C &copy; Pastelería Martha 2022</span>
+                        <span>&copy; Pastelería Martha 2022</span>
                     </div>
                 </div>
             </footer>
@@ -344,7 +359,7 @@
     </a>
 
     <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    <!-- <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -361,7 +376,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     @stack('scripts')
     <!-- Bootstrap core JavaScript-->

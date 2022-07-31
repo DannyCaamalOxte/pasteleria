@@ -46,6 +46,11 @@ new Vue({
             console.log(json);
           });
         },
+         detallandoProducto:function(){
+         //aca va el metodo para los datalles de ventas
+          $('#modalProductosDetalles').modal('show');
+        },
+        
         
 	},
 	// FIN DE METHODS
